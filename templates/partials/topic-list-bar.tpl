@@ -33,6 +33,11 @@
 				<a href="{{{ if template.category }}}{url}{{{ else }}}{config.relative_path}/{selectedFilter.url}{querystring}{{{ end }}}" class="btn btn-secondary fw-semibold position-absolute top-100 translate-middle-x start-50 mt-1 hide" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" id="new-topics-alert">
 					<i class="fa fa-fw fa-arrow-up"></i> [[recent:load-new-posts]]
 				</a>
+
+				<button component="topic/save-to-favorites" class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center">
+					<i class="fa fa-fw fa-regular fa-star text-primary"></i>
+					<span class="d-none d-md-inline fw-semibold">Favorite Posts</span>
+				</button>
 			</div>
 
 			<div class="d-flex gap-1 align-items-center">
