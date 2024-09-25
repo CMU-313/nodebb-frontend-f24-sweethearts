@@ -13,6 +13,11 @@
 				<!-- IMPORT partials/topic/sort.tpl -->
 				<!-- IMPORT partials/topic/tools.tpl -->
 
+				<button component="topic/save-to-favorites" class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center">
+					<i class="fa fa-fw fa-regular fa-star text-primary"></i>
+					<span class="d-none d-md-inline fw-semibold">Save to Favorites</span>
+				</button>
+
 				{{{ if (!feeds:disableRSS && rssFeedUrl) }}}
 				<a class="btn-ghost-sm d-none d-lg-flex align-self-stretch" target="_blank" href="{rssFeedUrl}" title="[[global:rss-feed]]"><i class="fa fa-rss text-primary"></i></a>
 				{{{ end }}}
