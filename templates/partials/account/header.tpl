@@ -45,6 +45,17 @@
 							{{{ end }}}
 							{{{ end }}}
 							{{{ end }}}
+							<!-- Dropdown button from ChatGPT -->
+							<div class="d-flex flex-wrap gap-1 text-sm align-items-center">
+								<button type="button" class="btn btn-light dropdown-toggle flex-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Add Roles <i class="fa fa-caret-down"></i>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu">
+									<li><a class="dropdown-item rounded-1" href="#">Instructor</a></li>
+									<li><a class="dropdown-item rounded-1" href="#">TA</a></li>
+									<li><a class="dropdown-item rounded-1" href="#">Student</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="d-flex gap-2" component="user/badges"></div>
