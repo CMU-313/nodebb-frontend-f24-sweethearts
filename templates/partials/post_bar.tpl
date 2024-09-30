@@ -13,9 +13,14 @@
 				<!-- IMPORT partials/topic/sort.tpl -->
 				<!-- IMPORT partials/topic/tools.tpl -->
 
-				<button component="topic/save-to-favorites" class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center">
+				<button component="topic/favorite" class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center">
 					<i class="fa fa-fw fa-regular fa-star text-primary"></i>
-					<span class="d-none d-md-inline fw-semibold">Save to Favorites</span>
+					<span class="d-none d-md-inline fw-semibold">[[topic:favorite]]</span>
+				</button>
+
+				<button component="topic/unfavorite" class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center hidden">
+					<i class="fa fa-fw fa-solid fa-star text-primary"></i>
+					<span class="d-none d-md-inline fw-semibold">[[topic:unfavorite]]</span>
 				</button>
 
 				{{{ if (!feeds:disableRSS && rssFeedUrl) }}}
