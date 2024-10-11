@@ -10,23 +10,16 @@
 
 		<div class="d-flex p-0 col-12 col-lg-7 gap-2 gap-lg-3 pe-1 align-items-start {{{ if config.theme.mobileTopicTeasers }}}mb-2 mb-lg-0{{{ end }}}">
 			<div class="flex-shrink-0 position-relative">
-				<button component="topic/save-to-favorites" class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center">
-					<i class="fa fa-fw fa-regular fa-star text-primary"></i>
-				</button>
-			</div>
-			<div class="flex-shrink-0 position-relative">
-				{{{ if showSelect }}}
-				<div class="checkbox d-flex gap-2 align-items-center" style="max-width:max-content">
-					<i component="topic/select" class="fa text-muted pointer fa-square-o"></i>
-				</div>
-				{{{ end }}}
-			</div>
-			<div class="flex-shrink-0 gap-0 p-0 align-items-start">
 				<a class="text-decoration-none" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 					{buildAvatar(./user, "40px", true, "avatar avatar-tooltip")}
 				</a>
+				{{{ if showSelect }}}
+				<div class="checkbox position-absolute top-100 start-50 translate-middle-x pt-2 m-0 d-none d-lg-flex" style="max-width:max-content">
+					<i component="topic/select" class="fa text-muted pointer fa-square-o p-1 hover-visible"></i>
+				</div>
+				{{{ end }}}
 			</div>
-			<div class="flex-grow-2 d-flex flex-wrap gap-1 position-relative">
+			<div class="flex-grow-1 d-flex flex-wrap gap-1 position-relative">
 				<h3 component="topic/header" class="title text-break fs-5 fw-semibold m-0 tracking-tight w-100 {{{ if showSelect }}}me-4 me-lg-0{{{ end }}}">
 					<a class="text-reset" href="{{{ if topics.noAnchor }}}#{{{ else }}}{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}{{{ end }}}">{./title}</a>
 				</h3>
